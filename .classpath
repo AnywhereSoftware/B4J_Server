@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/H/Documents/Visual Studio 2013/Projects/B4J/B4J/bin/Debug/libraries/jCore.jar"/>
+	<classpathentry kind="lib" path="C:/Users/H/Documents/Visual Studio 2013/Projects/B4J/B4J/bin/Debug/libraries/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="jetty-all-9.3.6.v20151106-uber.jar" sourcepath="jetty_src.zip"/>
+	<classpathentry kind="lib" path="C:/Users/H/Documents/Visual Studio 2013/Projects/B4J/B4J/bin/Debug/libraries/Json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/H/Documents/Visual Studio 2013/Projects/B4J/B4J/bin/Debug/libraries/jSQL.jar"/>
+	<classpathentry kind="lib" path="jetty-alpn-server-9.3.6.v20151106.jar" sourcepath="jetty_src.zip"/>
+	<classpathentry kind="lib" path="C:/Users/H/Documents/Visual Studio 2013/Projects/B4J/B4J/bin/Debug/libraries/c3p0-0.9.5.2.jar" sourcepath="c3p0-0.9.5.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/H/Documents/Visual Studio 2013/Projects/B4J/B4J/bin/Debug/libraries/mchange-commons-java-0.2.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
