@@ -48,7 +48,7 @@ import anywheresoftware.b4a.objects.collections.Map;
 import anywheresoftware.b4a.objects.collections.Map.MyMap;
 import anywheresoftware.b4a.objects.streams.File;
 
-@Version(2.75f)
+@Version(2.76f)
 @ShortName("Server")
 @DependsOn(values={"jetty_b4j", "servlet-api-3.1", "c3p0-0.9.5.2", "c3p0-oracle-thin-extras-0.9.5.2"
 		,"mchange-commons-java-0.2.11", "json"})
@@ -97,6 +97,7 @@ public class ServerWrapper {
 	public void Initialize(BA ba, String EventName) {
 		this.ba = ba;
 		this.eventName = EventName.toLowerCase(BA.cul);
+		threadsIndex.get().intValue(); //main thread should always be 0.
 		server = new Server();
 		context = new ServletContextHandler();
 		context.setContextPath("/");
@@ -306,6 +307,7 @@ public class ServerWrapper {
 	}
 	/**
 	 * Each thread is mapped to a specific index. This property returns the current thread index. 
+	 *Note that the main thread index is always 0.
 	 */
 	public int getCurrentThreadIndex() {
 		return threadsIndex.get().intValue();

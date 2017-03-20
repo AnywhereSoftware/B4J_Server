@@ -141,7 +141,7 @@ public class JServlet extends HttpServlet implements Filter{
 			} catch (Exception e) {
 				try {
 					response.sendError(500, e.toString());
-				} catch (IOException e1) {
+				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 				e.printStackTrace();
