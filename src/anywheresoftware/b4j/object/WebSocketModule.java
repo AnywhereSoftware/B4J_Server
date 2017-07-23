@@ -98,7 +98,7 @@ public class WebSocketModule {
 		public void onWebSocketError(Throwable cause) {
 			super.onWebSocketError(cause);
 			if (cause instanceof SocketTimeoutException || cause instanceof EOFException)
-				System.err.println(cause.getMessage());
+				System.err.println("onWebSocketError: " + cause.getMessage());
 			else
 				cause.printStackTrace();
 		}

@@ -27,7 +27,6 @@ import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.server.handler.RequestLogHandler;
 import org.eclipse.jetty.server.handler.gzip.GzipHandler;
-import org.eclipse.jetty.server.session.AbstractSessionManager;
 import org.eclipse.jetty.server.session.SessionHandler;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ErrorPageErrorHandler;
@@ -48,9 +47,9 @@ import anywheresoftware.b4a.objects.collections.Map;
 import anywheresoftware.b4a.objects.collections.Map.MyMap;
 import anywheresoftware.b4a.objects.streams.File;
 
-@Version(2.76f)
+@Version(2.80f)
 @ShortName("Server")
-@DependsOn(values={"jetty_b4j", "servlet-api-3.1", "c3p0-0.9.5.2", "c3p0-oracle-thin-extras-0.9.5.2"
+@DependsOn(values={"jetty_b4j", "c3p0-0.9.5.2", "c3p0-oracle-thin-extras-0.9.5.2"
 		,"mchange-commons-java-0.2.11", "json"})
 public class ServerWrapper {
 	@Hide
@@ -187,7 +186,7 @@ public class ServerWrapper {
 		if (staticFilesOptions != null)
 			staticHolder.setInitParameters(staticFilesOptions);
 		context.setSessionHandler(new SessionHandler());
-		AbstractSessionManager manager = (AbstractSessionManager) context.getSessionHandler().getSessionManager();
+		SessionHandler manager = context.getSessionHandler();
 		manager.setHttpOnly(true);
 		if (errorMap != null) {
 			ErrorPageErrorHandler err = new ErrorPageErrorHandler();
